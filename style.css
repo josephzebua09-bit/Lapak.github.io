@@ -1,0 +1,227 @@
+/* Variables for Aesthetic Palette */
+:root {
+    --bg-light: #ffffff;
+    --primary: #9d85e7; /* Vibrant Violet */
+    --accent: #ff8e6e;  /* Fresh Peach */
+    --text-dark: #1a1a1a;
+    --text-muted: #666666;
+    --thistle-soft: #fbf0f0;
+    --wheat-soft: #fff9ef;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, .brand-large {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.shadow-2 {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Tracking/Letter Spacing */
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+.tracking-widest {
+    letter-spacing: 4px;
+}
+
+/* Spacing Utilities */
+.py-10 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.pt-10 {
+    padding-top: 100px;
+}
+
+.mb-10 {
+    margin-bottom: 100px;
+}
+
+/* Navbar (Glassmorphism Effect) */
+.nav-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.4s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-dark) !important;
+    padding: 10px 15px !important;
+    margin: 0 5px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Buttons */
+.btn-main {
+    background: linear-gradient(135deg, var(--primary) 0%, #bb96f2 100%);
+    color: white;
+    font-weight: 600;
+    text-uppercase;
+    font-size: 0.9rem;
+    transition: 0.4s;
+    border: none;
+}
+
+.btn-main:hover {
+    box-shadow: 0 10px 30px rgba(157, 133, 231, 0.4);
+    transform: translateY(-3px);
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding: 150px 0;
+    background: radial-gradient(circle at top right, var(--wheat-soft) 0%, rgba(255,255,255,0) 50%),
+                radial-gradient(circle at bottom left, var(--thistle-soft) 0%, rgba(255,255,255,0) 50%);
+}
+
+.hero-img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-img-wrapper img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Game Card */
+.game-card {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 16/11;
+}
+
+.game-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 70%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    opacity: 0.8;
+    transition: 0.4s ease;
+}
+
+.game-card:hover .game-overlay {
+    opacity: 1;
+}
+
+.game-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-color: var(--wheat-soft);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Footer Aesthetic */
+.footer-aesthetic {
+    position: relative;
+    background-color: transparent;
+    margin-top: -50px;
+}
+
+.footer-aesthetic svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.footer-content {
+    background-color: #fdf0f0; /* Match wave color */
+    position: relative;
+    z-index: 1;
+}
+
+.brand-large span {
+    color: var(--primary);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    transition: 0.3s;
+    line-height: 2.2;
+}
+
+.footer-link:hover {
+    color: var(--primary);
+}
+
+.social-icon {
+    padding: 8px 15px;
+    background: white;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3sease;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: white;
+}
+
+hr {
+    opacity: 0.1;
+}
